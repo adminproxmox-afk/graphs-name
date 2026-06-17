@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphly - Орієнтовані графи</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/nav.css">
+    <link rel="stylesheet" href="../../assets/css/theme.css">
+    <link rel="stylesheet" href="../../assets/css/platform.css">
+    <link rel="stylesheet" href="../../assets/css/lecture_content.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="../../index.html" class="nav__logo"><i class="ri-organization-chart"></i> Graphly</a>
+                <div class="nav__actions">
+                    <button id="theme-toggle" class="theme-switcher" type="button" aria-label="Увімкнути темну тему">
+                        <i class="ri-moon-line"></i>
+                    </button>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line nav__burger"></i>
+                        <i class="ri-close-line nav__close"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="../../index.html" class="nav__link">Головна</a></li>
+                    <li><a href="../lectures.html" class="nav__link">Лекції</a></li>
+                    <li><a href="../graph_editor.html" class="nav__link">Редактор графів</a></li>
+                    <li><a href="../quiz.html" class="nav__link">Тестування</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="lecture-container">
+        <article class="lecture-content">
+            <p class="lecture-kicker">Лекція 4</p>
+            <h1 class="lecture-title">Орієнтовані графи</h1>
+
+            <div class="lecture-summary">
+                <p class="summary-highlight">Після цієї лекції ви зрозумієте:</p>
+                <ul class="summary-list">
+                    <li>чим орієнтований граф відрізняється від звичайного;</li>
+                    <li>що означають вхідний і вихідний степені вершини;</li>
+                    <li>як подати орграф за допомогою матриць і списків.</li>
+                </ul>
+            </div>
+
+            <section class="lecture-section">
+                <h2 class="section-title">Поняття орграфа</h2>
+                <p>Орієнтований граф, або орграф, складається з вершин та дуг. На відміну від звичайного графа, кожне ребро тут має напрямок. Саме напрямок показує, з якої вершини дуга виходить і в яку входить.</p>
+            </section>
+
+            <div class="lecture-block definition">
+                <div class="block-title">Ключова ідея</div>
+                <p>Якщо дуга позначена як <strong>(x<sub>1</sub>, x<sub>2</sub>)</strong>, то вона виходить з вершини <strong>x<sub>1</sub></strong> і входить у вершину <strong>x<sub>2</sub></strong>. Для петлі початок і кінець збігаються.</p>
+            </div>
+
+            <div class="image-container lecture-media">
+                <img src="../../assets/images/lectures/lecture4-loops-and-multigraph.png" alt="Мультиграф і граф з петлею з презентації">
+                <p class="image-caption">Фрагмент презентації з прикладами мультиграфа та графа з петлею.</p>
+            </div>
+
+            <section class="lecture-section">
+                <h2 class="section-title">Степені вершин</h2>
+                <ul class="lecture-list">
+                    <li><strong>d<sup>+</sup>(x)</strong> - кількість дуг, що входять до вершини.</li>
+                    <li><strong>d<sup>-</sup>(x)</strong> - кількість дуг, що виходять із вершини.</li>
+                    <li>Для орграфа важливо рахувати входи та виходи окремо, бо вони не обов'язково збігаються.</li>
+                </ul>
+            </section>
+
+            <div class="lecture-block example">
+                <div class="block-title">Подання графа</div>
+                <p>Презентація показує два основні способи подання орграфа: матрицю суміжності та матрицю інцидентності. Для насичених графів зручна матриця, а для розріджених - списки суміжності або список дуг.</p>
+            </div>
+
+            <section class="lecture-section">
+                <h2 class="section-title">Що варто запам'ятати</h2>
+                <ul class="lecture-list compact">
+                    <li>У орграфі напрямок дуги має значення.</li>
+                    <li>Петля з'єднує вершину саму з собою.</li>
+                    <li>Матриця суміжності для орграфа може бути несиметричною.</li>
+                    <li>Зручність подання залежить від задачі, яку ми розв'язуємо.</li>
+                </ul>
+            </section>
+
+            <div class="lecture-block question-block">
+                <div class="block-title">Питання для самоперевірки</div>
+                <ul class="questions-list">
+                    <li>Чим дуга відрізняється від звичайного ребра?</li>
+                    <li>Що означають d<sup>+</sup>(x) та d<sup>-</sup>(x)?</li>
+                    <li>Яке подання краще для розрідженого орграфа?</li>
+                </ul>
+            </div>
+
+            <nav class="lecture-navigation">
+                <button class="nav-btn prev-lecture" onclick="location.href='lecture3.html'">Попередня лекція</button>
+                <a class="nav-btn download-lecture" href="../../%D0%BB%D0%B5%D0%BA%D1%86%D1%96%D1%97/%D0%9B%D0%B5%D0%BA%D1%86%D1%96%D1%8F%204_%D0%9E%D1%80%D0%B3%D0%B3%D1%80%D0%B0%D1%84%D0%B8.pptx" download>Презентація</a>
+                <button class="nav-btn next-lecture" onclick="location.href='lecture5.html'">Наступна лекція</button>
+            </nav>
+        </article>
+    </main>
+
+    <footer class="footer-modern">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="../../index.html" class="nav__logo"><i class="ri-organization-chart"></i> Graphly</a>
+                <p class="footer-copy">Об'єднуємо теорію та практику для навчання графам у професійному стилі.</p>
+            </div>
+            <div class="footer-links">
+                <a class="footer-link" href="../lectures.html">Лекції</a>
+                <a class="footer-link" href="../graph_editor.html">Редактор графів</a>
+                <a class="footer-link" href="../quiz.html">Тести</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js" defer></script>
+    <script src="../../assets/js/app.js" defer></script>
+</body>
+
+</html>

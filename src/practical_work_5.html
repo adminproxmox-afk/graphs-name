@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphly - Практична робота 5</title>
+    <link rel="stylesheet" href="../assets/css/practical-pages.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/platform.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body data-practical-id="practical-5">
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="../index.html" class="nav__logo">
+                    <i class="ri-organization-chart"></i> Graphly
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="../index.html" class="nav__link">Головна</a></li>
+                    <li class="dropdown__item">
+                        <div class="nav__link">Матеріали<i class="ri-arrow-down-s-line dropdown__arrow"></i></div>
+                        <ul class="dropdown__menu">
+                            <li><a href="../src/lectures.html" class="dropdown__link"><i class="ri-book-open-line"></i> Лекції</a></li>
+                            <li><a href="../src/practical_work_new.html" class="dropdown__link"><i class="ri-file-list-3-line"></i> Практичні роботи</a></li>
+                            <li><a href="../src/assignments.html" class="dropdown__link"><i class="ri-file-code-line"></i> Завдання</a></li>
+                            <li><a href="../src/independent_work.html" class="dropdown__link"><i class="ri-user-line"></i> Самостійні роботи</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown__item">
+                        <div class="nav__link">Інструменти <i class="ri-arrow-down-s-line dropdown__arrow"></i></div>
+                        <ul class="dropdown__menu">
+                            <li><a href="../src/graph_editor.html" class="dropdown__link"><i class="ri-pencil-ruler-line"></i> Редактор графів</a></li>
+                            <li><a href="../src/algorithms.html" class="dropdown__link"><i class="ri-search-line"></i> Алгоритми</a></li>
+                            <li><a href="../src/graph_visualization.html" class="dropdown__link"><i class="ri-eye-line"></i> Візуалізація графів</a></li>
+                            <li><a href="../src/graph_analysis.html" class="dropdown__link"><i class="ri-bar-chart-box-line"></i> Аналіз графів</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown__item">
+                        <div class="nav__link">Тестування знань <i class="ri-arrow-down-s-line dropdown__arrow"></i></div>
+                        <ul class="dropdown__menu">
+                            <li><a href="../src/quiz.html" class="dropdown__link"><i class="ri-question-line"></i> Перевірка знань</a></li>
+                            <li><a href="../src/assessment.html" class="dropdown__link"><i class="ri-award-line"></i> Оцінювання</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../src/support.html" class="nav__link">Підтримка</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-shell practical-content">
+        <section class="practical-article">
+            <div class="practical-overline">
+                Застосування алгоритму Дейкстри
+            </div>
+            <div class="practical-card">
+                <h2>Мета</h2>
+                <p>Вивчення матричних способів подання орієнтованих графів.</p>
+                <p>У цій роботі зібрані реальні приклади, де алгоритм Дейкстри знаходить найкоротший шлях або оптимальний маршрут.</p>
+                <h2>Класичні приклади</h2>
+                <ul>
+                    <li>Оптимізація маршрутів у транспортних мережах</li>
+                    <li>Планування маршрутів доставки</li>
+                    <li>Управління комп’ютерними мережами</li>
+                    <li>Аналіз соціальних мереж</li>
+                    <li>Ігри та віртуальні світи</li>
+                    <li>Системи управління енергією</li>
+                    <li>Системи евакуації та планування шляху</li>
+                </ul>
+                <h2>Сенс алгоритму</h2>
+                <p>У кожному з прикладів потрібно знайти найкоротший або найефективніший шлях між вузлами графа з урахуванням ваг ребер.</p>
+                <h2>Приклад із файлу</h2>
+                <p>У тексті наведено короткий приклад для електромереж: кожен вузол представляє підстанцію, а ребра — лінії електропередачі з різними опорами.</p>
+                <div class="practical-callout">
+                    Це практична робота-пояснення застосування алгоритму, без великого технічного коду, але з чіткими сценаріями використання.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="../index.html" class="nav__logo">
+                    <i class="ri-organization-chart"></i> Graphly
+                </a>
+                <p class="footer-copy">Об'єднуємо теорію та практику для навчання графам у професійному стилі.</p>
+            </div>
+            <div class="footer-links">
+                <a class="footer-link" href="../src/lectures.html">Лекції</a>
+                <a class="footer-link" href="../src/graph_editor.html">Редактор графів</a>
+                <a class="footer-link" href="../src/algorithms.html">Алгоритми</a>
+                <a class="footer-link" href="../src/quiz.html">Тести</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/app.js" defer></script>
+    <!-- practical_pages.js removed as content is static -->
+</body>
+</html>

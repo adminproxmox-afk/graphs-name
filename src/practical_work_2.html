@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphly - Практична робота 2</title>
+    <link rel="stylesheet" href="../assets/css/practical-pages.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/platform.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body data-practical-id="practical-2">
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="../index.html" class="nav__logo">
+                    <i class="ri-organization-chart"></i> Graphly
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="../index.html" class="nav__link">Головна</a></li>
+                    <li class="dropdown__item">
+                        <div class="nav__link">Матеріали<i class="ri-arrow-down-s-line dropdown__arrow"></i></div>
+                        <ul class="dropdown__menu">
+                            <li><a href="../src/lectures.html" class="dropdown__link"><i class="ri-book-open-line"></i> Лекції</a></li>
+                            <li><a href="../src/practical_work_new.html" class="dropdown__link"><i class="ri-file-list-3-line"></i> Практичні роботи</a></li>
+                            <li><a href="../src/assignments.html" class="dropdown__link"><i class="ri-file-code-line"></i> Завдання</a></li>
+                            <li><a href="../src/independent_work.html" class="dropdown__link"><i class="ri-user-line"></i> Самостійні роботи</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown__item">
+                        <div class="nav__link">Інструменти <i class="ri-arrow-down-s-line dropdown__arrow"></i></div>
+                        <ul class="dropdown__menu">
+                            <li><a href="../src/graph_editor.html" class="dropdown__link"><i class="ri-pencil-ruler-line"></i> Редактор графів</a></li>
+                            <li><a href="../src/algorithms.html" class="dropdown__link"><i class="ri-search-line"></i> Алгоритми</a></li>
+                            <li><a href="../src/graph_visualization.html" class="dropdown__link"><i class="ri-eye-line"></i> Візуалізація графів</a></li>
+                            <li><a href="../src/graph_analysis.html" class="dropdown__link"><i class="ri-bar-chart-box-line"></i> Аналіз графів</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown__item">
+                        <div class="nav__link">Тестування знань <i class="ri-arrow-down-s-line dropdown__arrow"></i></div>
+                        <ul class="dropdown__menu">
+                            <li><a href="../src/quiz.html" class="dropdown__link"><i class="ri-question-line"></i> Перевірка знань</a></li>
+                            <li><a href="../src/assessment.html" class="dropdown__link"><i class="ri-award-line"></i> Оцінювання</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../src/support.html" class="nav__link">Підтримка</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-shell practical-content">
+        <section class="practical-article">
+            <div class="practical-overline">
+                Способи задання орієнтованих графів
+            </div>
+            <div class="practical-card">
+                <h2>Мета</h2>
+                <p>Вивчення матричних способів подання орієнтованих графів.</p>
+                <h2>Теоретичні відомості</h2>
+                <p>Графи є однією з основних структур у дискретній математиці та теорії алгоритмів. Вони широко застосовуються в моделюванні складних систем, транспортних мереж, інформаційних технологій та інших галузях. Орієнтовані графи мають важливе значення, оскільки дозволяють моделювати відносини, що мають напрямок.</p>
+                <h3>Орієнтований граф (орграф)</h3>
+                <p>Орієнтований граф (або орграф) — це множина вершин і впорядкованих пар вершин, які називаються дугами.</p>
+                <figure class="practical-figure">
+                    <img src="../assets/images/практичні роботи/2/рисунок%202.1.jpg" alt="Рисунок 2.1">
+                    <figcaption>Рисунок 2.1 – Орієнтований граф</figcaption>
+                </figure>
+                <h2>Способи задання графів</h2>
+                <p>Для задання графа необхідно пронумерувати вершини і ребра, а також задати відношення інцидентності. Відношення інцидентності будемо описувати трьома способами: матрицею інцидентності, матрицею суміжності, списком ребер графа.</p>
+                <h3>Приклад 1 – Неорієнтований граф</h3>
+                <p>Задати матрицями інцидентності і суміжності, а також списком ребер неорієнтований граф, зображений на рисунку.</p>
+                <figure class="practical-figure">
+                    <img src="../assets/images/практичні роботи/2/рисунок%202.2.jpg" alt="Рисунок 2.2">
+                    <figcaption>Рисунок 2.2 – Неорієнтований граф</figcaption>
+                </figure>
+                <h3>Матриця суміжності</h3>
+                <pre><code>a b c d e f g
+a 0 1 1 0 0 0 0
+b 1 0 1 0 0 0 0
+c 1 1 0 2 1 0 0
+d 0 0 2 1 1 0 0
+e 0 0 1 1 0 1 1
+f 0 0 0 0 1 0 0
+g 0 0 0 0 1 0 0
+</code></pre>
+                <h3>Матриця інцидентності</h3>
+                <pre><code>   a b c d e f g
+1  1 1 0 0 0 0 0
+2  0 1 1 0 0 0 0
+3  1 0 1 0 0 0 0
+4  0 0 0 1 1 0 0
+5  0 0 0 0 0 1 1
+</code></pre>
+                <h2>Завдання до виконання</h2>
+                <ul>
+                    <li>Задати граф списками ребер, записаних у лексикографічному порядку.</li>
+                    <li>Задати граф за допомогою матриці інцидентності.</li>
+                    <li>Задати граф за допомогою матриці суміжності.</li>
+                    <li>Задати граф за допомогою списків суміжності.</li>
+                </ul>
+                <h2>Контрольні питання</h2>
+                <ul>
+                    <li>Що таке орієнтований граф?</li>
+                    <li>Яка різниця між орієнтованими та неорієнтованими графами?</li>
+                    <li>Які основні види орієнтованих графів існують?</li>
+                    <li>Що таке ациклічний орієнтований граф і де він застосовується?</li>
+                    <li>Як визначається вхідний та вихідний ступінь вершини?</li>
+                    <li>Як представити орієнтований граф у вигляді матриці суміжності?</li>
+                    <li>У яких галузях використовуються орієнтовані графи?</li>
+                </ul>
+            </div>
+        </section>
+        <!-- Add additional figures if needed -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="../index.html" class="nav__logo">
+                    <i class="ri-organization-chart"></i> Graphly
+                </a>
+                <p class="footer-copy">Об'єднуємо теорію та практику для навчання графам у професійному стилі.</p>
+            </div>
+            <div class="footer-links">
+                <a class="footer-link" href="../src/lectures.html">Лекції</a>
+                <a class="footer-link" href="../src/graph_editor.html">Редактор графів</a>
+                <a class="footer-link" href="../src/algorithms.html">Алгоритми</a>
+                <a class="footer-link" href="../src/quiz.html">Тести</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/app.js" defer></script>
+    <script src="../assets/js/practical_pages.js" defer></script>
+</body>
+</html>

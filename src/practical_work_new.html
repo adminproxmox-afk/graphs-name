@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphly - Практичні роботи</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/platform.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/practical-pages.css">
+    <style>
+        .article-stack {
+            display: grid;
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .content-card {
+            background: var(--surface);
+            border: 1px solid rgba(16, 32, 63, 0.08);
+            border-radius: 24px;
+            box-shadow: var(--shadow-soft);
+            padding: 1.5rem;
+        }
+
+        .content-card h2 {
+            margin-bottom: 0.75rem;
+            font-size: clamp(1.35rem, 2vw, 1.75rem);
+        }
+
+        .content-card h3 {
+            margin: 1.2rem 0 0.65rem;
+            font-size: 1.05rem;
+        }
+
+        .meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 0.75rem 0 1rem;
+        }
+
+        .meta-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 0.75rem;
+            border-radius: 999px;
+            background: rgba(79, 112, 255, 0.12);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.82rem;
+            letter-spacing: 0.04em;
+        }
+
+        .text-block {
+            color: var(--text-muted);
+            line-height: 1.85;
+        }
+
+        .text-block p + p,
+        .text-block ul + p,
+        .text-block ol + p {
+            margin-top: 0.8rem;
+        }
+
+        .text-block ul,
+        .text-block ol {
+            padding-left: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .callout {
+            margin-top: 1rem;
+            padding: 1rem 1.1rem;
+            border-left: 4px solid var(--primary);
+            background: rgba(79, 112, 255, 0.06);
+            border-radius: 0 16px 16px 0;
+            color: var(--text-strong);
+        }
+
+        .source-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        details {
+            margin-top: 1rem;
+            border: 1px solid rgba(16, 32, 63, 0.08);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.55);
+            overflow: hidden;
+        }
+
+        summary {
+            cursor: pointer;
+            list-style: none;
+            padding: 1rem 1.1rem;
+            font-weight: 700;
+            color: var(--text-strong);
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details .details-body {
+            padding: 0 1.1rem 1rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .mini-card {
+            padding: 1rem;
+            border-radius: 16px;
+            background: rgba(79, 112, 255, 0.06);
+            color: var(--text-strong);
+            line-height: 1.7;
+        }
+
+        @media (max-width: 720px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page-shell page-enter">
+        <section class="page-hero">
+            <div>
+                <p class="page-kicker">Практика</p>
+                <h1 class="page-title">Практичні роботи з теорії графів</h1>
+                <p class="page-lead">
+                    Нижче не список файлів, а зміст, витягнутий із документів. Я зібрав основні теми, мету, завдання
+                    та контрольні питання у вигляді нормальної сторінки, щоб це можна було читати прямо на сайті.
+                </p>
+            </div>
+            <aside class="page-stat">
+                <strong>6</strong>
+                робіт, перенесених у HTML
+            </aside>
+        </section>
+
+        <section class="practical-grid" aria-label="Перехід до окремих практичних робіт">
+            <a class="practical-card" href="practical_work_1.html">
+                <div class="practical-overline">Практична 1</div>
+                <h3>Способи задання графів</h3>
+                <p>Матриця суміжності, матриця інцидентності, список суміжності та степені вершин.</p>
+            </a>
+            <a class="practical-card" href="practical_work_2.html">
+                <div class="practical-overline">Практична 2</div>
+                <h3>Орієнтовані графи</h3>
+                <p>Матричні способи подання орграфів, приклади та перетворення представлень.</p>
+            </a>
+            <a class="practical-card" href="practical_work_3.html">
+                <div class="practical-overline">Практична 3</div>
+                <h3>Підграфи та зв'язність</h3>
+                <p>План теми 2: підграфи, ізоморфізм, маршрути, цикли та матриця відстаней.</p>
+            </a>
+            <a class="practical-card" href="practical_work_4.html">
+                <div class="practical-overline">Практична 4</div>
+                <h3>Ейлерові та гамільтонові графи</h3>
+                <p>Зв'язність, компоненти зв'язності, перевірка ізоморфізму, задачі на діаметр і радіус.</p>
+            </a>
+            <a class="practical-card" href="practical_work_5.html">
+                <div class="practical-overline">Практична 5</div>
+                <h3>Застосування Дейкстри</h3>
+                <p>Реальні сценарії: транспорт, мережі, логістика, ігри, енергетика та евакуація.</p>
+            </a>
+            <a class="practical-card" href="practical_work_6.html">
+                <div class="practical-overline">Практична 6</div>
+                <h3>Алгоритм Дейкстри</h3>
+                <p>Покроковий розбір найкоротшого шляху у зваженому орграфі з таблицями міток.</p>
+            </a>
+        </section>
+
+        <div class="article-stack">
+            <article class="content-card">
+                <div class="meta-row">
+                    <span class="meta-pill">Практична 1</span>
+                    <span class="meta-pill">Графи. Способи задання графів</span>
+                </div>
+                <h2>Способи задання графів</h2>
+                <div class="text-block">
+                    <p><strong>Мета:</strong> вивчення матричних способів подання графів.</p>
+                    <p><strong>Завдання до виконання:</strong> записати матрицю суміжності, записати матрицю інцидентності, представити граф явним способом, представити граф списками суміжності, визначити степені вершин графа.</p>
+                    <p><strong>Контрольні питання:</strong></p>
+                    <ol>
+                        <li>Перерахуйте основні способи подання графів.</li>
+                        <li>Чому дорівнює сума степенів усіх вершин неорієнтованого графа?</li>
+                        <li>У чому відмінності матричного подання орієнтованих і неорієнтованих графів?</li>
+                        <li>У чому особливості подання графа матрицею суміжності?</li>
+                        <li>У чому особливості подання графа матрицею інцидентності?</li>
+                    </ol>
+                </div>
+                <div class="callout">Це базова робота для старту: тут закладається мова, якою далі описуються всі графи на курсі.</div>
+            </article>
+
+            <article class="content-card">
+                <div class="meta-row">
+                    <span class="meta-pill">Практична 2</span>
+                    <span class="meta-pill">Орієнтовані графи</span>
+                </div>
+                <h2>Способи задання орієнтованих графів</h2>
+                <div class="text-block">
+                    <p><strong>Мета:</strong> вивчення матричних способів подання орієнтованих графів.</p>
+                    <p>У документі пояснено, що орієнтований граф складається з множини вершин і впорядкованих пар вершин, які називаються дугами. Для задання графа використовуються матриця інцидентності, матриця суміжності та список ребер.</p>
+                    <div class="grid-2">
+                        <div class="mini-card">
+                            <strong>Матриця суміжності</strong>
+                            <p>Показує, чи існує дуга між двома вершинами і в який бік вона спрямована.</p>
+                        </div>
+                        <div class="mini-card">
+                            <strong>Матриця інцидентності</strong>
+                            <p>Фіксує зв'язок між вершинами та дугами для подальшого аналізу структури графа.</p>
+                        </div>
+                    </div>
+                    <p><strong>Ключова ідея прикладу:</strong> у документі наведено побудову матриць для неорієнтованого графа, щоб показати, як одна й та сама структура записується різними способами.</p>
+                </div>
+                <details>
+                    <summary>Що саме є у файлі</summary>
+                    <div class="details-body text-block">
+                        <p>Пояснення термінів, приклад побудови матриці суміжності й матриці інцидентності, а також практичні завдання на перетворення представлень графа.</p>
+                    </div>
+                </details>
+            </article>
+
+            <article class="content-card">
+                <div class="meta-row">
+                    <span class="meta-pill">Практична 3</span>
+                    <span class="meta-pill">Тема 2: Теорія графів</span>
+                </div>
+                <h2>Підграфи, ізоморфізм, маршрути та зв'язність</h2>
+                <div class="text-block">
+                    <p><strong>План:</strong> підграфи, ізоморфізм графів, зв'язок графа з відношенням, елементи графів, маршрути, ланцюги, шляхи та цикли, зв'язність, компоненти зв'язності, роздільність графа, матриця відстаней графа.</p>
+                    <p><strong>Хід роботи:</strong> опрацювати теоретичний матеріал, розглянути приклади виконання завдань, виконати практичні завдання, зокрема завдання 6.3.2 та 6.3.3.</p>
+                    <p><strong>Домашні орієнтири:</strong> задача про найкоротший ланцюг, ейлерові графи та гамільтонові цикли.</p>
+                </div>
+                <details>
+                    <summary>Перелік тем</summary>
+                    <div class="details-body text-block">
+                        <ul>
+                            <li>Підграфи</li>
+                            <li>Ізоморфізм графів</li>
+                            <li>Маршрути, ланцюги, шляхи та цикли</li>
+                            <li>Зв'язність і компоненти зв'язності</li>
+                            <li>Матриця відстаней графа</li>
+                        </ul>
+                    </div>
+                </details>
+            </article>
+
+            <article class="content-card">
+                <div class="meta-row">
+                    <span class="meta-pill">Практична 4</span>
+                    <span class="meta-pill">Компоненти зв'язності</span>
+                </div>
+                <h2>Зв'язність, ейлерові та гамільтонові графи</h2>
+                <div class="text-block">
+                    <p>Документ починається з означень зв'язних вершин, компоненти зв'язності та зв'язного графа. Далі пояснюються ейлерові та гамільтонові графи й подається теорема про парність степенів вершин у зв'язному ейлеровому графі.</p>
+                    <p>Окремий блок присвячено перевірці графів на ізоморфізм: збіг кількості вершин, ребер, сум степенів і пошук підстановки між вершинами.</p>
+                </div>
+                <details>
+                    <summary>Завдання з файлу</summary>
+                    <div class="details-body text-block">
+                        <ol>
+                            <li>Вказати ексцентриситети вершин, центр, радіус та діаметр графа, а також знайти найкоротший ланцюг між двома заданими вершинами.</li>
+                            <li>Побудувати можливі види маршрутів на графі: маршрут, замкнутий маршрут, ланцюг, простий ланцюг, цикл, ейлерів ланцюг, гамільтонів цикл.</li>
+                            <li>Довести, що наведені на рисунку графи ізоморфні.</li>
+                            <li>Визначити, які з графів є ізоморфними.</li>
+                        </ol>
+                    </div>
+                </details>
+            </article>
+
+            <article class="content-card">
+                <div class="meta-row">
+                    <span class="meta-pill">Практична 5</span>
+                    <span class="meta-pill">Алгоритм Дейкстри</span>
+                </div>
+                <h2>Де використовується алгоритм Дейкстри</h2>
+                <div class="text-block">
+                    <p>У файлі зібрано приклади практичного застосування алгоритму Дейкстри: транспортні мережі, доставка, маршрутизація пакетів, соціальні мережі, ігри, енергосистеми та системи евакуації.</p>
+                    <p>Кожен приклад показує одне й те саме ядро задачі: знайти найкоротший або найефективніший шлях між вузлами графа при різних обмеженнях.</p>
+                    <ul>
+                        <li>Оптимізація маршрутів у транспортних мережах</li>
+                        <li>Планування доставки</li>
+                        <li>Маршрутизація у комп'ютерних мережах</li>
+                        <li>Аналіз соціальних зв'язків</li>
+                        <li>Пошук шляхів у ігрових світах</li>
+                        <li>Системи евакуації та планування шляху</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="content-card">
+                <div class="meta-row">
+                    <span class="meta-pill">Практична 6</span>
+                    <span class="meta-pill">Пошук мінімального шляху</span>
+                </div>
+                <h2>Алгоритм Дейкстри у зваженому орграфі</h2>
+                <div class="text-block">
+                    <p>Ця робота вже дає покрокове пояснення алгоритму: вершини отримують тимчасові та постійні мітки, значення заносяться у таблицю, а мінімальна мітка визначає наступну фіксовану вершину.</p>
+                    <p><strong>Алгоритм завершує роботу, коли всі вершини отримають постійні мітки.</strong> З таблиці потім легко відновити найкоротший шлях і послідовність вершин.</p>
+                    <div class="grid-2">
+                        <div class="mini-card">
+                            <strong>Перший крок</strong>
+                            <p>Заповнюється перший рядок таблиці для стартової вершини.</p>
+                        </div>
+                        <div class="mini-card">
+                            <strong>Наступні кроки</strong>
+                            <p>Кожного разу обирається вершина з мінімальною тимчасовою міткою.</p>
+                        </div>
+                    </div>
+                </div>
+                <details>
+                    <summary>Приклад із документа</summary>
+                    <div class="details-body text-block">
+                        <p>У файлі наведено таблицю для шляху від A до F, де початкові значення поступово перераховуються: 0, 3, 10, 15, 17, 23. Далі йде поетапний опис кожного кроку алгоритму.</p>
+                    </div>
+                </details>
+            </article>
+        </div>
+
+        <div class="callout" style="margin-top: 1.25rem;">
+            Якщо хочеш, я можу далі розкласти кожну практичну в окрему підсторінку з повним текстом і прикладами, але вже зараз основний зміст перенесено на сайт як читабельний матеріал.
+        </div>
+    </main>
+
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/app.js" defer></script>
+</body>
+</html>
